@@ -84,6 +84,7 @@ int main(){
     // decimalPrompt();
     // scores();
     fileIO();
+    (void funtion)* f = &decimalPrompt;
 
     return (0);
 }
