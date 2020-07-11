@@ -1,18 +1,23 @@
 #include "Bureucrat.hpp"
 #include "Form.hpp"
 #include "ShrubberyCreation.hpp"
+#include "Intern.hpp"
 #include <string>
 #include <exception>
 #include <iostream>
 
 int main(void)
 {
+	Intern i;
+	Form *tmp;
 
-	Bureucrat bob("BOBO", 12);
-	ShrubberyCreation sc("Home");
+	Bureucrat b("bob", 1);
+	tmp = i.makeForm("robotomy request", "Bender");
 
-	bob.executeForm(sc);
-	bob.signForm(sc);
-	bob.executeForm(sc);
+	b.signForm(*tmp);
+
+	tmp->execute(b);
+
+	delete tmp;
 	return (0);
 }
